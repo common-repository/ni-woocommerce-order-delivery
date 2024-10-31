@@ -1,0 +1,65 @@
+/* CSS Document */
+.parent_content {
+/*border:1px solid red;*/
+	margin:0px;
+	padding:0px;
+	background:#ffffff;
+}
+.content {}
+.parent_content   .box-title {
+	height:40px;
+	padding-top:10px;
+	color: #b1232f;
+	font-size:14px;
+	font-weight:bold;
+	text-transform: uppercase;
+	padding-right:20px;
+	padding-left:20px;
+}
+.box-data {
+	padding-top:10px;
+	
+}
+.box-data .data-table{
+	border-collapse: collapse;
+	width: 99%;
+	text-align:left;
+}
+.box-data .data-table, th, td {
+	border: 1px solid #b1232f;
+	
+}
+
+.box-data .data-table tr:nth-of-type(odd) { 
+ 
+   background-color: #FFECB3; 
+  color:#000;
+}
+.box-data .data-table tr:nth-of-type(even) { 
+  background-color: #FFFDE7; 
+   color:#000;
+}
+
+.box-data .data-table th {
+	padding: .5em;
+	background-color:#b1232f;
+	color:#FFF;
+}
+.box-data .data-table  td {
+	color:#444;
+	padding: .5em;
+/*
+padding-top: .5em;
+padding-bottom: .5em;
+*/
+}
+
+.data-table  tr:hover {
+        background-color: #CFD8DC;
+}
+
+.row-main-box { }
+.columns-box { float:left; width:170px; height:80px; border:1px solid #b1232f; padding:10px;  margin:10px;}
+.columns-title { padding-bottom:10px; color:#b1232f; font-size:14px; font-weight:bold; }
+.columns-box .columns-icon  { float:left; color:#b1232f; }
+.columns-box .columns-value  {float:right; padding-top:30px; color:#3e4f5e;font-weight:bold;font-size:18px;}

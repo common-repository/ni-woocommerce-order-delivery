@@ -1,0 +1,283 @@
+/* CSS Document */
+/*Form Css*/
+.containt-main {
+background:#FFF;
+margin-top:20px;
+width:600px;
+border:1px solid #b1232f;
+
+}
+.containt-main .report-title {
+
+	padding-left:10px;
+	background-color:#b1232f;
+	color:#FFF;
+	height:30px;
+	vertical-align:central;
+	padding-top:10px;
+	font-size:20px;	
+}
+.ni-main-table {  width:100%;
+padding-top:10px;}
+.ni-main-table  td { font-size:14px; padding-left:10px;}
+/*Table css*/
+.ni-od-data-table table { border:1px solid #00695C;}
+.ni-od-data-table table {
+	width: 100%; 
+  	border-collapse: collapse; 
+	}
+ /* Zebra striping */
+.ni-od-data-table tr:nth-of-type(odd) { 
+ 
+   background-color: #FFECB3; 
+  color:#000;
+}
+.ni-od-data-table tr:nth-of-type(even) { 
+  background-color: #FFFDE7; 
+   color:#000;
+}
+.ni-od-data-table th { 
+  background: #b1232f; 
+  color: white; 
+  font-weight: bold; 
+}	
+.ni-od-data-table td, .ni-od-data-table th { 
+  padding: 6px; 
+  text-align: left; 
+}
+.ni-od-data-table tr {
+	border:1px solid #b1232f;
+	 color:#000;
+}
+
+.ni_print {
+	color:#FFF;
+    padding:5px 15px; 
+    background:#b1232f; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	 font-weight:bold;  
+}
+.ni_print:hover  {
+  background:#B2DFDB; 
+   color:#000;
+   font-weight:bold; 
+}
+.summary-total {
+	color:#FFF;
+	height:25px;
+	padding-right:10px;
+	background-color:#b1232f;
+	text-align:right; 
+	padding-top:10px; 
+	font-weight:bold;
+}
+  .ni_btn_od { background-color:#b1232f; color:#FFF;cursor:pointer;}
+/* 
+Table reponsive css
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	.ni-od-data-table table, .ni-od-data-table thead, .ni-od-data-table tbody, .ni-od-data-table th, .ni-od-data-table td, .ni-od-data-table tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	.ni-od-data-table thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	
+	.ni-od-data-table tr { border: 1px solid #ccc; }
+	
+	.ni-od-data-table td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	.ni-od-data-table td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	.ni-od-data-table td:nth-of-type(1):before { content: "Order ID"; }
+	.ni-od-data-table td:nth-of-type(2):before { content: "Order Date"; }
+	.ni-od-data-table td:nth-of-type(3):before { content: "Billing First Name"; }
+	.ni-od-data-table td:nth-of-type(4):before { content: "Billing Email"; }
+	.ni-od-data-table td:nth-of-type(5):before { content: "Billing Country"; }
+	.ni-od-data-table td:nth-of-type(6):before { content: "Order Currency"; }
+	.ni-od-data-table td:nth-of-type(7):before { content: "Payment Method"; }
+	.ni-od-data-table td:nth-of-type(8):before { content: "Item Name"; }
+	.ni-od-data-table td:nth-of-type(9):before { content: "Qty"; }
+	.ni-od-data-table td:nth-of-type(10):before { content: "Price"; }
+	.ni-od-data-table td:nth-of-type(11):before { content: "Line Total"; }
+	.ni-od-data-table td:nth-of-type(12):before { content: "Line Tax"; }
+}
+/*Summary Start From Here*/
+
+.order-summary{
+/*border:1px solid red;*/
+width:100%;
+float:left;
+ background:#FFF;
+ padding-top:20px;
+}
+.order-summary-container {
+	border:1px solid red; 
+	width:100%;
+	border:1px solid #b1232f;
+}
+.order-summary .box { 
+	float:left; padding-right:19px;
+	padding-bottom:10px;
+	
+}
+.order-summary .box .circle
+{
+  font-size:16px;	
+  height: 170px;
+  width: 170px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%; /* may require vendor prefixes */ 
+  overflow:hidden;
+  text-align:center;
+  font-weight:bold;  
+}
+.circle-total-sales {
+	background-color:#D32F2F;
+	border:1px solid #C62828;
+	color:#FFF;
+}
+.circle-total-sales:hover {
+  background-color: #FFCDD2;
+   border: 1px solid #C62828; 
+   color:#000;
+}
+.circle-total-order {
+	background-color:#1E88E5;
+	border:1px solid #1976D2;
+	color:#FFF;
+}
+.circle-total-order:hover {
+  background-color: #90CAF9;
+   border: 1px solid #1976D2; 
+   color:#000;
+}
+.circle-today-sales {
+	background-color:#0097A7;
+	border:1px solid #00838F;
+	color:#FFF;
+}
+.circle-today-sales:hover {
+  background-color: #80DEEA;
+   border:1px solid #00838F;
+   color:#000;
+}
+.circle-today-order {
+	background-color:#EF6C00;
+	border:1px solid #E65100;
+	color:#FFF;
+}
+
+.circle-today-order:hover {
+	background-color:#FFE0B2;
+	border:1px solid #E65100;
+	 color:#000;
+}
+.circle-today-customer {
+	background-color:#7B1FA2;
+	border:1px solid #6A1B9A;
+	color:#FFF;
+}
+.circle-today-customer:hover {
+	background-color:#E1BEE7;
+	border:1px solid #6A1B9A;
+	color:#000;
+}
+.circle-today-guest {
+	background-color:#388E3C;
+	border:1px solid #2E7D32;
+	color:#FFF;
+}
+
+.circle-today-guest:hover {
+	background-color:#A5D6A7;
+	border:1px solid #2E7D32;
+	color:#000;
+}
+
+
+.circle-today-completed {
+	background-color:#FF9800;
+	border:1px solid #F57C00;
+	color:#FFF;
+}
+
+.circle-today-completed:hover {
+	background-color:#FFEB3B;
+	border:1px solid #F57C00;
+	color:#000;
+}
+
+
+.circle span{
+font-size:25px;
+}
+.order-summary .box .circle:hover {
+ 
+ 
+}
+/*Summary title*/
+.summary-title{
+	 background: #b1232f; 
+  color: white; 
+	padding:10px;
+	font-weight:bold;
+	margin-bottom:20px;
+
+	font-size:20px;
+}
+
+
+/*Pro Version add*/
+.ni-pro-info {
+	border:1px solid #b1232f;
+}
+.ni-pro-info ul li { font-weight:bold;}
+/*END Pro Version*/
+
+/*Hide Print Item*/
+@media print{ 
+.print_hide { display:none;}
+
+.change_status{
+	color:#000;
+	cursor:auto;
+}
+
+.ni-od-data-table th.action_column, .ni-od-data-table td.action_column{
+	display:none;
+}
+
+}
